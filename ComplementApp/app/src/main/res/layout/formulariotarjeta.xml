@@ -17,71 +17,88 @@
             android:id="@+id/img1"
             android:layout_width="335dp"
             android:layout_height="209dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="-100dp"
             android:src="@drawable/tarjetabbva"
             tools:layout_editor_absoluteX="130dp"
             tools:layout_editor_absoluteY="500dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/txtnombre"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/custom_edittext"
-            android:hint="Nombre"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </com.google.android.material.textfield.TextInputEditText>
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/numtarjeta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/custom_edittext"
-            android:hint="Tarjeta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </com.google.android.material.textfield.TextInputEditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/username"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="Nombre"
+                android:padding="8dp"
+                android:textColor="@color/md_blue_200"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="40dp"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/fecha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/custom_edittext"
-            android:hint="Tarjeta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </com.google.android.material.textfield.TextInputEditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/password"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="Numero Tarjeta"
+                android:padding="8dp"
+                android:inputType="textPassword"
+                android:textColor="@color/md_blue_200"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="20dp"/>
 
-        <com.google.android.material.textfield.TextInputEditText
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:id="@+id/contraseña"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/custom_edittext"
-            android:hint="Tarjeta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-        </com.google.android.material.textfield.TextInputEditText>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/fecha"
+                    android:background="@drawable/custom_edittext"
+                    android:drawablePadding="8dp"
+                    android:hint="Fecha"
+                    android:padding="8dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/md_blue_200"
+                    android:textColorHighlight="@color/cardview_dark_background"
+                    android:layout_marginTop="20dp"/>
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/cvc"
+                    android:background="@drawable/custom_edittext"
+                    android:drawablePadding="8dp"
+                    android:hint="CVC"
+                    android:padding="8dp"
+                    android:inputType="textPassword"
+                    android:textColor="@color/md_blue_200"
+                    android:textColorHighlight="@color/cardview_dark_background"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="30dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:id="@+id/loginButton"
+            android:text="PAGAR"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@color/md_blue_400"
+            app:cornerRadius = "15dp"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
